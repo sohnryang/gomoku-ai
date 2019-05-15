@@ -5,6 +5,10 @@ Board::Board() {
     this->board_v.assign(19, vec);
 }
 
+Board::Board(vector<vector<int>> vec) {
+    this->board_v = vec;
+}
+
 void Board::place_stone(int y, int x, int type) {
     this->board_v[y][x] = type;
 }
