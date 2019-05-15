@@ -16,3 +16,33 @@ int Board::check_pos(int y, int x) {
 vector<vector<int>> Board::raw_data() {
     return this->board_v;
 }
+
+bool Board::game_running() {
+    const int dx[] = { -1, -1, -1, 0, 0, 1, 1, 1 };
+    const int dy[] = { -1, 0, 1, -1, 1, -1, 0, 1 };
+    for (int i = 0; i < 19; ++i) {
+        for (int j = 0; j < 19; ++j) {
+            if (this->board_v[i][j] == 0) continue;
+            int current = this->board_v[i][j];
+            for (int k = 0; k < 8; ++k) {
+                bool success = true;
+                for (int l = 1; l < 5; ++l) {
+                    if (i + dy[k] * l < 0 || i + dy[k] * l >= 19) {
+                        success = false;
+                        break;
+                    }
+                    if (j + dx[k] * l < 0 || j + dx[k] * l >= 19) {
+                        success = false;
+                        break;
+                    }
+                    if (this->board_v[i + dy[k] * l][j + dx[k] * l] != current) {
+                        success = false;
+                        break;
+                    }
+                }
+                if (success) return false;
+            }
+        }
+    }
+    return true;
+}
