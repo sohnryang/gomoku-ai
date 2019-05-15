@@ -12,6 +12,12 @@ namespace AITest {
             Board* b = new Board();
             Assert::IsNotNull<Board>(b);
             delete b;
+            vector<int> vec(19, 1);
+            vector<vector<int>> board_v(19, vec);
+            Board* b2 = new Board(board_v);
+            Assert::IsNotNull<Board>(b2);
+            Assert::IsTrue(b2->raw_data() == board_v);
+            delete b2;
         }
 
         TEST_METHOD(TestBoardSize) {
