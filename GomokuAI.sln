@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.28803.452
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GomokuAI", "GomokuAI\GomokuAI.vcxproj", "{907F05E2-5816-46CD-ACAD-5871D5645886}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AITest", "AITest\AITest.vcxproj", "{5BAC4603-51F8-4E0C-8318-A7CCCA3728D3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -21,6 +23,14 @@ Global
 		{907F05E2-5816-46CD-ACAD-5871D5645886}.Release|x64.Build.0 = Release|x64
 		{907F05E2-5816-46CD-ACAD-5871D5645886}.Release|x86.ActiveCfg = Release|Win32
 		{907F05E2-5816-46CD-ACAD-5871D5645886}.Release|x86.Build.0 = Release|Win32
+		{5BAC4603-51F8-4E0C-8318-A7CCCA3728D3}.Debug|x64.ActiveCfg = Debug|x64
+		{5BAC4603-51F8-4E0C-8318-A7CCCA3728D3}.Debug|x64.Build.0 = Debug|x64
+		{5BAC4603-51F8-4E0C-8318-A7CCCA3728D3}.Debug|x86.ActiveCfg = Debug|Win32
+		{5BAC4603-51F8-4E0C-8318-A7CCCA3728D3}.Debug|x86.Build.0 = Debug|Win32
+		{5BAC4603-51F8-4E0C-8318-A7CCCA3728D3}.Release|x64.ActiveCfg = Release|x64
+		{5BAC4603-51F8-4E0C-8318-A7CCCA3728D3}.Release|x64.Build.0 = Release|x64
+		{5BAC4603-51F8-4E0C-8318-A7CCCA3728D3}.Release|x86.ActiveCfg = Release|Win32
+		{5BAC4603-51F8-4E0C-8318-A7CCCA3728D3}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
