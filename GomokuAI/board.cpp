@@ -21,7 +21,7 @@ vector<vector<int>> Board::raw_data() {
     return this->board_v;
 }
 
-bool Board::game_running() {
+pair<bool, int> Board::game_running() {
     const int dx[] = { -1, -1, -1, 0, 0, 1, 1, 1 };
     const int dy[] = { -1, 0, 1, -1, 1, -1, 0, 1 };
     for (int i = 0; i < 19; ++i) {
@@ -44,9 +44,9 @@ bool Board::game_running() {
                         break;
                     }
                 }
-                if (success) return false;
+                if (success) return make_pair(false, current);
             }
         }
     }
-    return true;
+    return make_pair(true, -1);
 }

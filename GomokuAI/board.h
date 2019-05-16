@@ -1,6 +1,9 @@
 #pragma once
+#include <utility>
 #include <vector>
 
+using std::make_pair;
+using std::pair;
 using std::vector;
 
 class Board {
@@ -12,5 +15,5 @@ public:
     void place_stone(int y, int x, int type);
     int check_pos(int y, int x);
     vector<vector<int>> raw_data();
-    bool game_running();
+    pair<bool, int> game_running();
 };

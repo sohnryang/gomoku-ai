@@ -10,7 +10,7 @@ int main() {
     cout << "Let's compete with an AI." << endl;
     Board board;
     bool player_turn = true;
-    while (board.game_running()) {
+    while (board.game_running().first) {
         if (player_turn) {
             cout << "Input coordinates(y, x): ";
             int y, x;
@@ -27,6 +27,7 @@ int main() {
             cout << '|' << endl;
         }
     }
-    cout << "Game Finished" << endl;
+    cout << "Game Finished -- player " << board.game_running().second
+         << " wins!" << endl;
     return 0;
 }
