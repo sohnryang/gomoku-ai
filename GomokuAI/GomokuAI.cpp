@@ -1,5 +1,7 @@
 ﻿#include <iostream>
+#include "ai.h"
 #include "board.h"
+#include "global.h"
 
 using std::cin;
 using std::cout;
@@ -12,10 +14,16 @@ int main() {
     bool player_turn = true;
     while (board.game_running().first) {
         if (player_turn) {
+            cout << "Your turn:" << endl;
             cout << "Input coordinates(y, x): ";
             int y, x;
             cin >> y >> x;
             board.place_stone(y, x, 1);
+        } else {
+            cout << "AI's turn:" << endl;
+            auto ai_result = ai::run_ai(board, true, START_DEPTH, -INF, INF);
+            board.place_stone(ai_result.second.first,
+                              ai_result.second.second, 2);
         }
         for (int y = 0; y < 19; ++y) {
             cout << '|';
@@ -26,6 +34,7 @@ int main() {
             }
             cout << '|' << endl;
         }
+        player_turn = !player_turn;
     }
     cout << "Game Finished -- player " << board.game_running().second
          << " wins!" << endl;

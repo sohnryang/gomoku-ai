@@ -32,5 +32,8 @@
     <ClInclude Include="ai.h">
       <Filter>소스 파일</Filter>
     </ClInclude>
+    <ClInclude Include="global.h">
+      <Filter>소스 파일</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

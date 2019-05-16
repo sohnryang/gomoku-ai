@@ -158,6 +158,7 @@
   <ItemGroup>
     <ClInclude Include="ai.h" />
     <ClInclude Include="board.h" />
+    <ClInclude Include="global.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
