@@ -36,7 +36,8 @@ int main() {
         }
         player_turn = !player_turn;
     }
-    cout << "Game Finished -- player " << board.game_running().second
-         << " wins!" << endl;
+    cout << "Game Finished" << endl;
+    if (board.game_running().second == 1) cout << "You win!" << endl;
+    else cout << "AI wins!" << endl;
     return 0;
 }
